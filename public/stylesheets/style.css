@@ -1,0 +1,31 @@
+body {
+  font-family: sans-serif;
+}
+
+.navbar {
+  margin-bottom: 40px;
+}
+
+img {
+  width: 100%;
+}
+
+.errorMessage {
+    padding: 20px 5px;
+    color: white;
+    background: red;
+    text-align: center;
+    font-size: .95em;
+    position: fixed;
+    width: 300px;
+    bottom: -200px;
+    right: 10px;
+    animation: showUp 1s forwards
+}
+
+
+@keyframes showUp {
+  to {
+    bottom: 0px
+  }
+}

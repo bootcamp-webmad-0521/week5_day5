@@ -1,0 +1,39 @@
+<div class="container">
+    <h1>Perfil de {{student.username}}</h1>
+    <hr>
+
+    <div class="row justify-content-around">
+
+        <div class="col-md-3">
+            {{#if student.profileImg}}
+            <img src="{{student.profileImg}}" alt="{{student.username}}">
+            {{else}}
+            <img src="https://www.publicdomainpictures.net/pictures/280000/velka/not-found-image-15383864787lu.jpg"
+                alt="{{student.username}}">
+            {{/if}}
+        </div>
+        <div class="col-md-4">
+            <p>Nombre: {{student.username}}</p>
+            <p>Presentación: {{student.description}}</p>
+
+            <hr>
+
+            {{#if hasPMrole}}
+            <a href="/students/edit/{{student.id}}" class="btn btn-dark">Editar alumno</a>
+            <a href="/students/delete/{{student.id}}" class="btn btn-danger">Eliminar alumno</a>
+            <hr>
+            <a href="/students/assignrole/{{student.id}}/DEV" class="btn btn-primary">Convertir a DEV</a>
+            <a href="/students/assignrole/{{student.id}}/TA" class="btn btn-primary">Convertir a TA</a>
+            {{/if}}
+
+
+            {{#if isOwner}}
+            <a href="/students/edit/{{student.id}}" class="btn btn-dark">Editar mi perfil</a>
+            {{/if}}
+
+        </div>
+    </div>
+
+
+    <a href="/students" class="btn btn-dark">Volver</a>
+</div>

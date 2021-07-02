@@ -1,0 +1,37 @@
+<div class="container">
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-6">
+
+            <h1>Editar alumno {{username}}</h1>
+
+            <hr>
+
+            <form action="/students/edit/{{id}}" method="POST">
+
+                <div class="form-group">
+                    <label for="username">Usuario</label>
+                    <input type="text" class="form-control" name="username" id="username" value="{{username}}">
+                </div>
+
+                <div class="form-group">
+                    <label for="profileImg">Avatar (URL)</label>
+                    <input type="text" class="form-control" name="profileImg" id="profileImg" value="{{profileImg}}">
+                </div>
+
+
+                <div class="form-group">
+                    <label for="description">¡Preséntate!</label>
+                    <input type="text" class="form-control" name="description" id="description" value="{{description}}">
+                </div>
+
+
+                <button type="submit" class="btn btn-dark btn-block btn-lg">Guardar edición</button>
+
+            </form>
+        </div>
+
+    </div>
+
+</div>
